@@ -9,10 +9,10 @@
   --clr-accent2: darkorange;
   --clr-accent3: darkslateblue;
   --clr-white: white;
-  --clr-black: blacke;
+  --clr-black: black;
 
   --s-base: 1rem;
-  --s-base-xl: calc(var(--s-base) 2);
+  --s-base-xl: calc(var(--s-base) * 2);
   --s-base-small: calc(var(--s-base) / 2);
   --s-base-xs: calc(var(--s-base) / 5);
   --s-border: 0.125rem;
@@ -38,24 +38,20 @@ body {
 }
 
 .preview-card {
+  --clr-accent: var(--clr-accent3);
+  box-shadow: var(--clr-accent) 10px 10px 1px;
+
   font-size: 0.9rem;
   padding: var(--s-base);
+
+  border: black solid var(--s-border);
+  border-radius: var(--s-radius-outer);
 
   width: 400px;
 }
 
-.preview-card-travel {
-  border: black solid var(--s-border);
-  border-radius: var(--s-radius-outer);
-  box-shadow: var(--clr-accent3) 10px 10px 1px;
-  padding: var(--s-base);
-}
-
 .preview-card-lifestyle {
-  border: black solid var(--s-border);
-  border-radius: var(--s-radius-outer);
-  box-shadow: var(--clr-accent2) 10px 10px 1px;
-  padding: var(--s-base);
+  --clr-accent: var(--clr-accent2);
 }
 
 img {
@@ -76,12 +72,8 @@ img {
   align-self: center;
 }
 
-.preview-card-travel .photo-author {
-  border: var(--clr-accent3) solid var(--s-border);
-}
-
-.preview-card-lifestyle .photo-author {
-  border: var(--clr-accent2) solid var(--s-border);
+.photo-author {
+  border: var(--clr-accent) solid var(--s-border);
 }
 
 .author {
@@ -108,10 +100,6 @@ button {
   padding-block: var(--s-base-small);
 }
 
-.preview-card-travel button {
-  background-color: var(--clr-accent3);
-}
-
-.preview-card-lifestyle button {
-  background: var(--clr-accent2);
+.preview-card button {
+  background-color: var(--clr-accent);
 }
